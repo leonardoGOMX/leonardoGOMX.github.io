@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Inicio - Mundo Pc</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html"></a>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">inicio</a></li>
+                <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="TEST.html">TEST</a></li>
+                <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="ticket.html">TICKET</a></li>
+               
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+<body>
+    <center>
+    <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <span class="site-heading-upper text-primary mb-3">Ingresa los Productos</span>
+        </h1><br>
+    </header>
+    </center>
+
+    <div id="tabla" class="tabla">
+    <header align="center">
+
+    <input type="text" id="producto1" placeholder="Nombre del producto">
+    <input type="text" id="precio1" placeholder="Precio del producto">
+    <input type="text" id="cantidad1" placeholder="Cantidad del producto"><br>
+    
+    <input type="text" id="producto2" placeholder="Nombre del producto">
+    <input type="text" id="precio2" placeholder="Precio del producto">
+    <input type="text" id="cantidad2" placeholder="Cantidad del producto"><br>
+
+    <input type="text" id="producto3" placeholder="Nombre del producto">
+    <input type="text" id="precio3" placeholder="Precio del producto">
+    <input type="text" id="cantidad3" placeholder="Cantidad del producto"><br>
+    
+    <input type="text" id="producto4" placeholder="Nombre del producto">
+    <input type="text" id="precio4" placeholder="Precio del producto">
+    <input type="text" id="cantidad4" placeholder="Cantidad del producto"><br>
+
+    <input type="text" id="producto5" placeholder="Nombre del producto">
+    <input type="text" id="precio5" placeholder="Precio del producto">
+    <input type="text" id="cantidad5" placeholder="Cantidad del producto"><br>
+    
+    <input type="text" id="producto6" placeholder="Nombre del producto">
+    <input type="text" id="precio6" placeholder="Precio del producto">
+    <input type="text" id="cantidad6" placeholder="Cantidad del producto"><br>
+
+    <input type="text" id="producto7" placeholder="Nombre del producto">
+    <input type="text" id="precio7" placeholder="Precio del producto">
+    <input type="text" id="cantidad7" placeholder="Cantidad del producto"><br>
+    
+    <input type="text" id="producto8" placeholder="Nombre del producto">
+    <input type="text" id="precio8" placeholder="Precio del producto">
+    <input type="text" id="cantidad8" placeholder="Cantidad del producto"><br>
+
+    <input type="text" id="producto9" placeholder="Nombre del producto">
+    <input type="text" id="precio9" placeholder="Precio del producto">
+    <input type="text" id="cantidad9" placeholder="Cantidad del producto"><br>
+    
+    <input type="text" id="producto10" placeholder="Nombre del producto">
+    <input type="text" id="precio10" placeholder="Precio del producto">
+    <input type="text" id="cantidad10" placeholder="Cantidad del producto"><br>
+
+    <br>
+    <button onclick="sumarsubtotal()">Calcular total</button>
+
+
+    <h3>
+    <p class="letras" id="subtotal"></p>
+    <p class="letras" id="iva"></p>
+    <p class="letras" id="descuento"></p>
+    <p class="letras" id="total"></p>
+    
+</h3>
+
+<button onclick="ticket()">Imprimir</button>
+</div>
+</header>
+
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+
+    
+    <script>
+        var subtotal = 0;
+        var iva = 0.16;
+        var total = 0;
+        var Cantpromo = 0;
+        var Totalpromo = 0;
+        var cerveza = 0;
+        var descuento = 0;
+        var descuentototal = 0;
+
+        function ticket(){
+            window.print();
+
+        }
+
+        function sumarsubtotal(){
+            
+            var productos1 = document.getElementById("producto1").value;
+            var productos2 = document.getElementById("producto2").value;
+            var productos3 = document.getElementById("producto3").value;
+            var productos4 = document.getElementById("producto4").value;
+            var productos5 = document.getElementById("producto5").value;
+            var productos6 = document.getElementById("producto6").value;
+            var productos7 = document.getElementById("producto7").value;
+            var productos8 = document.getElementById("producto8").value;
+            var productos9 = document.getElementById("producto9").value;
+            var productos10 = document.getElementById("producto10").value;
+
+            var cantidad1 = document.getElementById("cantidad1").value;
+            var precio1 = document.getElementById("precio1").value;
+            var cantidad2 = document.getElementById("cantidad2").value;
+            var precio2 = document.getElementById("precio2").value;
+            var cantidad3 = document.getElementById("cantidad3").value;
+            var precio3 = document.getElementById("precio3").value;
+            var cantidad4 = document.getElementById("cantidad4").value;
+            var precio4 = document.getElementById("precio4").value;
+            var cantidad5 = document.getElementById("cantidad5").value;
+            var precio5 = document.getElementById("precio5").value;
+            var cantidad6 = document.getElementById("cantidad6").value;
+            var precio6 = document.getElementById("precio6").value;
+            var cantidad7 = document.getElementById("cantidad7").value;
+            var precio7 = document.getElementById("precio7").value;
+            var cantidad8 = document.getElementById("cantidad8").value;
+            var precio8 = document.getElementById("precio8").value;
+            var cantidad9 = document.getElementById("cantidad9").value;
+            var precio9 = document.getElementById("precio9").value;
+            var cantidad10 = document.getElementById("cantidad10").value;
+            var precio10 = document.getElementById("precio10").value;
+            
+            subtotal = (parseFloat(cantidad1) * parseFloat(precio1)) + (parseFloat(cantidad2) * parseFloat(precio2)) + (parseFloat(cantidad3) * parseFloat(precio3)) + (parseFloat(cantidad4) * parseFloat(precio4)) + (parseFloat(cantidad5) * parseFloat(precio5)) + (parseFloat(cantidad6) * parseFloat(precio6)) + (parseFloat(cantidad7) * parseFloat(precio7)) + (parseFloat(cantidad8) * parseFloat(precio8)) + (parseFloat(cantidad9) * parseFloat(precio9)) + (parseFloat(cantidad10) * parseFloat(precio10));
+            iva = (parseFloat(subtotal) * parseFloat(0.16));
+            total = (parseFloat(subtotal) + parseFloat(iva));
+
+            if ( total >=250 && total <500) {
+                alert("Usted se gano dos boletos de cine")
+
+            }
+
+            if (total >=500 && total <1000){
+                alert("Felicidades te ganaste una coca")
+
+            }
+
+            if (total >= 1000){
+                alert("UN cupon del 3% en total de la compra")
+
+                descuento = total*0.03;
+                total=total-descuento;
+                document.getElementById("total").innerHTML = "Total" + " " +  "$" + total;
+            }else{
+                descuento = 0;
+            }
+
+            
+            if(productos1 == "cerveza"){
+                if(cantidad1 >= 3){
+                    Cantpromo = cantidad1/3;
+                    Totalpromo = parseInt(Cantpromo);
+                    alert(Totalpromo);
+                    cerveza = precio1 * Totalpromo;
+                    total = total - cerveza;
+                    document.getElementById("total").innerHTML = "Total" + " " + "$" + total;
+                    alert("Felicidades has ganado una promo de 3x2")
+                }
+
+                
+            }
+
+            if(productos2 == "cerveza"){
+                            if(cantidad2 >= 3){
+                    Cantpromo = cantidad2/3;
+                    Totalpromo = parseInt(Cantpromo);
+                    alert(Totalpromo);
+                    cerveza = precio2 * Totalpromo;
+                    total = total - cerveza;
+                    document.getElementById("total").innerHTML = "Total" + " " + "$" + total;
+                    alert("Felicidades has ganado una promo de 3x2")
+                }
+
+                
+            }
+
+            if(productos3 == "cerveza"){
+                            if(cantidad3 >= 3){
+                    Cantpromo = cantidad3/3;
+                    Totalpromo = parseInt(Cantpromo);
+                    alert(Totalpromo);
+                    cerveza = precio3 * Totalpromo;
+                    total = total - cerveza;
+                    document.getElementById("total").innerHTML = "Total" + " " + "$" + total;
+                    alert("Felicidades has ganado una promo de 3x2")
+                }
+
+        
+            }
+
+            if(productos4 == "cerveza"){
+                            if(cantidad4 >= 3){
+                    Cantpromo = cantidad4/3;
+                    Totalpromo = parseInt(Cantpromo);
+                    alert(Totalpromo);
+                    cerveza = precio4 * Totalpromo;
+                    total = total - cerveza;
+                    document.getElementById("total").innerHTML = "Total" + " " + "$" + total;
+                    alert("Felicidades has ganado una promo de 3x2")
+                }
+
+                
+            }
+
+            if(productos5 == "cerveza"){
+                            if(cantidad5 >= 3){
+                    Cantpromo = cantidad5/3;
+                    Totalpromo = parseInt(Cantpromo);
+                    alert(Totalpromo);
+                    cerveza = precio5 * Totalpromo;
+                    total = total - cerveza;
+                    document.getElementById("total").innerHTML = "Total" + " " + "$" + total;
+                    alert("Felicidades has ganado una promo de 3x2")
+                }
+
+                
+            }
+
+            if(productos6 == "cerveza"){
+                            if(cantidad6 >= 3){
+                    Cantpromo = cantidad6/3;
+                    Totalpromo = parseInt(Cantpromo);
+                    alert(Totalpromo);
+                    cerveza = precio6 * Totalpromo;
+                    total = total - cerveza;
+                    document.getElementById("total").innerHTML = "Total" + " " + "$" + total;
+                    alert("Felicidades has ganado una promo de 3x2")
+                }
+
+                
+            }
+
+            if(productos7 == "cerveza"){
+                            if(cantidad7 >= 3){
+                    Cantpromo = cantidad7/3;
+                    Totalpromo = parseInt(Cantpromo);
+                    alert(Totalpromo);
+                    cerveza = precio7 * Totalpromo;
+                    total = total - cerveza;
+                    document.getElementById("total").innerHTML = "Total" + " " + "$" + total;
+                    alert("Felicidades has ganado una promo de 3x2")
+                }
+
+                
+            }
+
+            if(productos8 == "cerveza"){
+                            if(cantidad8 >= 3){
+                    Cantpromo = cantidad8/3;
+                    Totalpromo = parseInt(Cantpromo);
+                    alert(Totalpromo);
+                    cerveza = precio8 * Totalpromo;
+                    total = total - cerveza;
+                    document.getElementById("total").innerHTML = "Total" + " " + "$" + total;
+                    alert("Felicidades has ganado una promo de 3x2")
+                }
+
+                
+            }
+
+            if(productos9 == "cerveza"){
+                            if(cantidad9 >= 3){
+                    Cantpromo = cantidad9/3;
+                    Totalpromo = parseInt(Cantpromo);
+                    alert(Totalpromo);
+                    cerveza = precio9 * Totalpromo;
+                    total = total - cerveza;
+                    document.getElementById("total").innerHTML = "Total" + " " + "$" + total;
+                    alert("Felicidades has ganado una promo de 3x2")
+                }
+
+                
+            }
+
+            if(productos10 == "cerveza"){
+                            if(cantidad10 >= 3){
+                    Cantpromo = cantidad10/3;
+                    Totalpromo = parseInt(Cantpromo);
+                    alert(Totalpromo);
+                    cerveza = precio8 * Totalpromo;
+                    total = total - cerveza;
+                    document.getElementById("total").innerHTML = "Total" + " " + "$" + total;
+                    alert("Felicidades has ganado una promo de 3x2")
+                }
+
+                
+            }
+
+                        
+            descuentototal = descuento + cerveza;
+            document.getElementById("subtotal").innerHTML = "El subtotal es de" + " " + "$" + subtotal;
+            document.getElementById("iva").innerHTML = "Total con IVA para cobrar" + " "+ "$" + iva;
+            document.getElementById("descuento").innerHTML= "total del descuento" + " " + "$" + descuentototal;
+            document.getElementById("total").innerHTML = "Total a cobrar" + " "+ "$" + total;
+
+        }
+
+        
+
+       
+       
+    </script>
+
+    
+</body>
+</html>
